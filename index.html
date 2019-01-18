@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laurine Gillet</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script type="text/javascript" src="js/jquery.inview.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="description" content="Cv en ligne de Laurine Gillet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<img src="img/fondlg2.png" id="img_header">
+	</header>
+	<main>
+		<nav id="nav_mobile">
+			<a id="nav_mobile_burger" href="#nav_mobile"><img width="50px" height="50px" src="img/burger.svg" id="img_burger"></a>
+				
+			<div id="nav_mobile_content">
+				<a id="nav_mobile_content_close" href=""><img width="50px" height="50px" src="img/burger.svg" id="img_burger"></a><br/>
+				<a href="#a_propos">A propos</a><br/>
+				<a href="#parcours">Parcours</a><br/>
+				<a href="#competences">Compétences</a><br/>
+				<a href="#portfolio">Portfolio</a><br/>
+				<a href="#contact">Contact</a>
+			</div>
+		</nav>
+		<nav id="nav_principale">
+			<ul id="menu_nav">
+				<li class="menu_liste"><a href="#a_propos">A propos</a></li>
+				<li class="menu_liste"><a href="#parcours">Parcours</a></li>
+				<li class="menu_liste"><a href="#competences">Compétences</a></li>
+				<li class="menu_liste"><a href="#portfolio">Portfolio</a></li>
+				<li class="menu_liste"><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<section id="a_propos">
+			<img src="img/moi.png">
+			<h2 class="ml16"><span class="letter">A</span><span class="letter"> </span><span class="letter">p</span><span class="letter">r</span><span class="letter">o</span><span class="letter">p</span><span class="letter">o</span><span class="letter">s</span></h2>
+			<p>Steuplé sois indulgeant, c'est en cours de réalisation !!!</p>
+			<p> Coucou c'est moi Laurine, j'apprends à coder avec Franck et Quentin via la formation "Développeur Web et Web mobile" de l'Aformac. La vie c'est trop bien, surtout avec des chats et du chocolat.	</p>
+		</section>
+		<section id="parcours">
+			<h2 class="ml16"><span class="letter">P</span><span class="letter">a</span><span class="letter">r</span><span class="letter">c</span><span class="letter">o</span><span class="letter">u</span><span class="letter">r</span><span class="letter">s</span></h2>
+			<div>
+				<h3>Formation:</h3>
+				<ul>
+					<li>Actuellement: "Développeur Web et Web mobile" - Aformac</li>
+					<li>2015: Master métiers de l'enseignement, de l'éducation et de la formation </li>
+					<li>2013: Licence Psychologie</li>
+					<li>2010: Bac Littéraire Cinéma Audiovisuel Magueule</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Expériences:</h3>
+				<ul>
+					<li>Oct 2017 - aout 2018: Professeur des écoles - Education Nationale</li>
+					<li>Oct 2016 - aout 2017: Professeur particulier - Complétude</li>
+					<li>Oct 2015 - juillet 2017: Auxiliaire parentale - Cotègos</li>
+				</ul>
+			</div>	
+		</section>
+			<section id="competences">
+			<h2 class="ml16">Compétences</h2>
+			<div><img src="img/html.png"></div>
+			<div><img src="img/css.png"></div>
+			<div><img src="img/js.png"></div>
+			<div><i class="fas fa-sync-alt fa-5x"></i><p>Adaptabilité</p></div>
+			<div><i class="fas fa-battery-three-quarters fa-5x"></i><p>Autonomie</p></div>
+			<div><i class="fas fa-user-graduate fa-5x"></i><p>Capacité à se former</p></div>
+			<div><i class="fas fa-people-carry fa-5x"></i><p>Travail d'équipe</p></div>
+			<div><i class="fas fa-globe-europe fa-5x"></i><p>Anglais: Bon</p></div>
+			<div><i class="far fa-laugh-beam fa-5x"></i><p>Bonne humeur</p></div>
+		</section>
+
+		<section id="portfolio">
+			<h2 class="ml16">Portfolio</h2>
+			<div class="site_portfolio"><a href="www.laurinegillet.fr"><img src="img/porfolio.jpg" id="mon_site_img" ></a>
+			<figcaption>Mon tout premier site que j'ai trop fait toute seule de A à Z.</figcaption></div>
+		</section>
+		<section id="contact">
+			<h2 class='ml16'>Contact</h2>
+				<form action="fonction/envoi.php" method="post" enctype="multipart/form-data">
+					<input id="name" type="text" name="username" placeholder=" Votre nom" /><br/>
+					<input id="mail" type="mail" name="usermail" placeholder=" Votre email" /><br/>
+					<textarea id="comment" name="texte" placeholder=" Votre message"></textarea><br/>
+					<p id="compteur"></p>
+    				<p>
+                	Formulaire d'envoi de fichier :<br />
+                	<input type="file" name="monfichier" /><br />
+                	<input type="submit" value="Envoyer le fichier" />
+        			</p>
+					<input type="checkbox" id='rgpd'>J'ai lu et accepté notre politique de confidentialité des données<br>
+					<button id="valid" class="button" type="submit"><span>Envoyer</span></button>
+					<div id="result"></div>
+				</form>
+				
+		</section>
+	</main>
+
+	<footer> 
+		<a href="#img_header"><img src="img/fleche_haut.png" id="fleche_haut"></a>
+		<a href="mentions.html">Mentions légales et remerciments.</a>
+		<a href="https://github.com/LaurineGillet" target="_blank"><img src="img/github.png" class="social"></a>
+		<a href="https://www.linkedin.com/in/laurine-gillet" target="_blank"><img src="img/linkedin2.png" class="social"></a>
+	</footer>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

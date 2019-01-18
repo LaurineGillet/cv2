@@ -1,0 +1,370 @@
+html, body
+{
+	width: 100%;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2vh;
+}
+
+body
+{
+	background-color: white;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+header
+{
+	width: 100%;
+	z-index: 20;
+	background-color: white;
+	position: relative;
+}
+
+
+#img_header
+{
+	width: 100%;
+	
+}
+
+#fleche_haut
+{
+	display: block;
+	position: fixed;
+	bottom: 7%;
+	right: 0;
+	width: 2%;
+}
+
+a
+{
+	text-decoration: none;
+	color: white;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+// MENU
+
+#nav_principale
+{	
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #265253;
+	color: white;
+	font-size: 1.3em;
+	z-index: 10;
+}
+
+#nav_mobile
+{
+	display: none;
+	position: fixed;
+ 	top:0;
+ 	background-color: transparent;
+ 	z-index: 100;
+ 	line-height: 5vh;
+}
+
+#nav_mobile_burger
+{ 
+	height: 50px;
+}
+
+#nav_mobile_content
+{
+	background-color: #265253;
+}
+
+#nav_mobile:target #nav_mobile_content
+{
+	display: block;
+}
+
+#nav_mobile:not(target) #nav_mobile_burger
+{
+	display: block;
+}
+
+#nav_mobile:target #nav_mobile_burger
+{
+	display: none;
+}
+
+#nav_mobile:not(target) #nav_mobile_content
+{
+	display: none;
+}
+
+.menu_liste
+{
+	display: inline;
+}
+
+
+// SECTIONS
+
+section
+{
+	display: block;
+	position: relative;
+	padding: 2.15%;
+	text-align: justify;
+	height: 95vh;
+}
+
+#a_propos, #competences, #contact
+{
+	background-color: white;
+}
+
+#parcours, #portfolio
+{
+	background-color: #265253;
+	color: white;
+}
+
+#a_propos
+{
+	padding-top: 20vh;
+
+	img
+	{
+	float: left;
+	width: 20%;
+	border: 2px solid black;
+	margin: 2%;
+	margin-top: 0;
+	}
+}
+
+#parcours
+{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	line-height: 5vh;
+
+	h2
+	{
+		width: 150vh;
+	}
+}
+
+#competences
+{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+
+	h2
+	{
+		width: 100vh;
+
+	}
+
+	img
+	{
+		width: 17vh;
+	}
+
+	div
+	{
+		text-align: center;
+	}
+
+}
+
+#portfolio
+{
+	#mon_site_img
+	{
+		border: 3px solid;
+		width: 70%;
+	}
+
+	.site_portfolio
+	{
+		text-align: center;
+	}
+}
+
+#contact 
+{
+	padding-top: 15vh;
+	margin:0;
+	width: 100%;
+
+	form
+	{
+		text-align: center;
+		width: 80%;
+
+		input 
+		{ 
+			height: 5vh;
+		}
+
+		textarea
+		{
+			height: 20vh;
+			width: 100px;
+			// &::placeholder
+			// {
+			// 	margin-top: 60px;
+			// }
+		}
+
+		textarea, input
+		{
+			width: 55%;
+			font-size: 80%;
+			font-family: 'Ubuntu', sans-serif;
+			border-bottom: 2px solid;
+			border-top: none;
+			border-right: none;
+			border-left: none;
+		}
+	}
+}
+
+footer
+{
+	background-color: #265253;
+	text-align: center;
+
+	.social
+	{
+		width: 3%;
+	}
+}
+
+
+#mentions
+{
+	margin-top: 5%;
+}
+
+/*ANIMATION H2*/
+
+.ml16 {
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/*FOND BOUTTON*/
+
+.button {
+	position: relative;
+	appearance: none;
+	background: #f72359;
+	padding: 1em 2em;
+	border: none;
+	color: white;
+	font-size: 1.2em;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	border-radius: 100px;
+	
+	span {
+		position: relative;
+		pointer-events: none;
+	}
+	
+	&::before {
+		--size: 0;
+		content: '';
+		position: absolute;
+		left: var(--x);
+		top: var(--y);
+		width: var(--size);
+		height: var(--size);
+		background: radial-gradient(circle closest-side, #4405f7, transparent);
+		transform: translate(-50%, -50%);
+		transition: width .2s ease, height .2s ease;
+	}
+	
+	&:hover::before {
+		--size: 400px;
+	}
+}
+
+@media screen and (max-width: 960px)
+{
+	 header
+	{
+		top: 65px;
+	}
+
+	#fleche_haut
+	{
+		width: 3%;
+	}
+
+	input 
+	{ 
+		height: 4vh;
+	}
+
+	#mentions
+	{
+		margin-top: 13.5%;
+	}
+
+}
+
+@media screen and (max-width: 500px)
+{
+	#fleche_haut
+	{
+		width: 4.3%;
+	}
+
+	#img_moi
+	{
+		display: none;
+	}
+
+	#nav_mobile
+	{
+		display: block;
+	}
+
+	#nav_principale
+	{
+		display: none;
+	}
+
+	#a_propos
+	{
+		margin-top: 0;
+	}
+
+	header
+	{
+		top:0;
+	}
+
+
+	#mentions
+	{
+		margin-top: 13.5%;
+	}
+
+}
