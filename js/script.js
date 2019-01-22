@@ -91,12 +91,12 @@ $('#comment').keyup(function() {
      	nombreMots = 0;
     }
  
-    var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractère(s) restant';
+    var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractères obligatoires restants';
     $('#compteur').text(msg);
  
- 	if(nombreCaractere = 50){
- 		$('#compteur').fadeOut();
- 	};
+ 	// if(nombreCaractere = 50){
+ 	// 	$('#compteur').fadeOut();
+ 	// };
   });
  
 })

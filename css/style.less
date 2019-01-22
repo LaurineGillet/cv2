@@ -1,3 +1,8 @@
+*
+{
+	box-sizing: border-box;
+}
+
 html, body
 {
 	width: 100%;
@@ -12,21 +17,18 @@ body
 	background-size: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-}
 
-header
-{
-	width: 100%;
-	z-index: 20;
-	background-color: white;
-	position: relative;
-}
+	header
+	{
+		width: 100%;
+		z-index: 20;
+		background-color: white;
+		position: relative;
 
-
-#img_header
-{
-	width: 100%;
-	
+		img {
+			width: 100%;
+		}
+	}
 }
 
 #fleche_haut
@@ -112,9 +114,9 @@ section
 {
 	display: block;
 	position: relative;
-	padding: 2.15%;
 	text-align: justify;
-	height: 95vh;
+	height: 100vh;
+	padding: 8%;
 }
 
 #a_propos, #competences, #contact
@@ -204,7 +206,6 @@ section
 	form
 	{
 		text-align: center;
-		width: 80%;
 
 		input 
 		{ 
@@ -231,6 +232,11 @@ section
 			border-right: none;
 			border-left: none;
 		}
+
+		#rgpd
+		{
+
+		}
 	}
 }
 
@@ -238,18 +244,15 @@ footer
 {
 	background-color: #265253;
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 
-	.social
+	.social, img
 	{
 		width: 3%;
 	}
 }
 
-
-#mentions
-{
-	margin-top: 5%;
-}
 
 /*ANIMATION H2*/
 

@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   width: 100%;
@@ -11,13 +14,13 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-header {
+body header {
   width: 100%;
   z-index: 20;
   background-color: white;
   position: relative;
 }
-#img_header {
+body header img {
   width: 100%;
 }
 #fleche_haut {
@@ -75,9 +78,9 @@ a {
 section {
   display: block;
   position: relative;
-  padding: 2.15%;
   text-align: justify;
-  height: 95vh;
+  height: 100vh;
+  padding: 8%;
 }
 #a_propos,
 #competences,
@@ -138,7 +141,6 @@ section {
 }
 #contact form {
   text-align: center;
-  width: 80%;
 }
 #contact form input {
   height: 5vh;
@@ -160,12 +162,12 @@ section {
 footer {
   background-color: #265253;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-footer .social {
+footer .social,
+footer img {
   width: 3%;
-}
-#mentions {
-  margin-top: 5%;
 }
 /*ANIMATION H2*/
 .ml16 {
