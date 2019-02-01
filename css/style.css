@@ -113,19 +113,19 @@ section {
   width: 150vh;
 }
 #competences {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
   align-items: center;
 }
 #competences h2 {
   width: 100vh;
 }
 #competences img {
-  width: 17vh;
+  width: 50px;
 }
-#competences div {
-  text-align: center;
+#competences #skills {
+  display: flex;
+}
+#competences ul {
+  display: inline-block;
 }
 #portfolio #mon_site_img {
   border: 3px solid;
