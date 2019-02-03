@@ -65,7 +65,7 @@ $("#valid").click(function(e){
 						type : 'POST',
 						data : { "name" : name, "mail" : mail, "comment" : comment, "rgpd" : $("#rgpd").is(':checked') },
 						dataType : 'json',
-						success : function(donnees, statut){ // success est toujours en place, bien sûr !
+						success : function(donnees, statut){
 						$("#result").html(donnees);
 						},
 						error : function(resultat, statut, erreur){
@@ -82,21 +82,29 @@ $("#valid").click(function(e){
 $('#comment').keyup(function() {
  
     var nombreCaractere = $(this).val().length;
- 
-    // // On soustrait le nombre limite au nombre de caractère existant
-    var nombreCaractere = 50 - nombreCaractere;
+    var nombreCaractereRestants = 50 - nombreCaractere;
  
     var nombreMots = jQuery.trim($(this).val()).split(' ').length;
     if($(this).val() === '') {
      	nombreMots = 0;
     }
  
-    var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractères obligatoires restants';
-    $('#compteur').text(msg);
+
+    var msg = ' ' + nombreMots + ' mot | ' + nombreCaractereRestants + ' Caractères obligatoires restants';
+    var msg2 = ' ' + nombreMots + ' mots | ' + nombreCaractereRestants + ' Caractères obligatoires restants';
+   
  
- 	// if(nombreCaractere = 50){
- 	// 	$('#compteur').fadeOut();
- 	// };
+if(nombreMots >= 2 && nombreCaractere <= 50) {
+	$('#compteur').text(msg2);
+	$('#compteur').fadeIn();
+}
+else if (nombreMots <= 1 && nombreCaractere <= 50){
+	$('#compteur').text(msg);
+	$('#compteur').fadeIn();
+}else{
+	$('#compteur').fadeOut();
+}
+
   });
  
 })
