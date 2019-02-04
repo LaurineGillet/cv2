@@ -124,6 +124,9 @@ section {
   margin: 2%;
   margin-top: 0;
 }
+#a_propos button a {
+  color: black;
+}
 #parcours {
   display: flex;
   flex-flow: row wrap;
