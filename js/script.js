@@ -106,5 +106,18 @@ else if (nombreMots <= 1 && nombreCaractere <= 50){
 }
 
   });
+
  
+$('.show-rgpd').click(function()
+  {
+    $('.rgpd-content').toggleClass('visible');
+  }
+)
+
+$('#close-rgpd').click(function()
+  {
+    $('.rgpd-content').toggleClass('visible');
+  }
+)
+
 })

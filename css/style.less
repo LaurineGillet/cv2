@@ -49,6 +49,32 @@ body
 			
 		}
 	}
+	
+	.rgpd-content {
+  		position: relative;
+		width: 70%;
+		height: 0px;
+		margin: auto;
+		padding: 5%;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 10px;
+		color: white;
+		overflow: hidden;
+		display: none;
+	}
+
+	.visible {
+		height: auto;
+		display: block;
+	}
+
+	#close-rgpd {
+	 	position: absolute;
+		height: 36px;
+	  	top: 5px;
+	  	right: 5px;
+	}
+
 }
 
 #mentions
@@ -270,12 +296,13 @@ section
 			border-left: none;
 		}
 
-		#rgpd
+		a
 		{
-
+			color: black;
 		}
 	}
 }
+
 
 footer
 {

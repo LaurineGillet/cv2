@@ -39,6 +39,28 @@ body header h1 {
   font-weight: normal;
   letter-spacing: 0.5vw;
 }
+body .rgpd-content {
+  position: relative;
+  width: 70%;
+  height: 0px;
+  margin: auto;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  display: none;
+}
+body .visible {
+  height: auto;
+  display: block;
+}
+body #close-rgpd {
+  position: absolute;
+  height: 36px;
+  top: 5px;
+  right: 5px;
+}
 #mentions {
   height: 100%;
 }
@@ -181,6 +203,9 @@ section {
   border-top: none;
   border-right: none;
   border-left: none;
+}
+#contact form a {
+  color: black;
 }
 footer {
   background-color: #265253;
